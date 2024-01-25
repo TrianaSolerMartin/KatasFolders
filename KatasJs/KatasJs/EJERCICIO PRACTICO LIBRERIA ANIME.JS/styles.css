@@ -1,0 +1,60 @@
+* {
+    box-sizing: border-box;
+  }
+  
+  body {
+    --base-color: #705fd3;
+    
+    background-color: #000000;
+  }
+  
+  .viz {
+    display: flex;
+    height: 100vh;
+    margin: auto;
+    max-width: 920px;
+  }
+  
+  .viz-item {
+    height: 100%;
+  }
+  
+  .viz-item-indicator {
+    background-color: #000;
+    border-right: 1px solid #000;
+    height: 5px;
+    margin-bottom: 50px;
+  }
+  
+  .viz-item-inner {
+    height: 80%;
+    padding-top: 20%;
+    position: relative;
+    transform-origin: 50% 50%;
+  }
+  
+  .viz-item--active .viz-item-dot {
+    background-color: #ffffff;
+  }
+  
+  .viz-item--partitioned {
+    background-color: hsla(324, 100%, 50%, .3);
+  }
+  
+  .viz-item--partitioned .viz-item-indicator {
+    background-color: hsl(324, 100%, 76%);
+  }
+  
+  .viz-item-dot {
+    background-color: var(--base-color);
+    border-radius: 50px;
+    display: block;
+    height: 100%;
+    left: 50%;
+    position: absolute;
+    width: 2px;
+  }
+  
+  .viz-item-dot:first-child {
+    top: 0;
+  }
